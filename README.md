@@ -52,6 +52,7 @@ The dataset provides information details on over 180,000 public trees. For this 
 
 
 
+   
 #### 2] Data Profiling (AWS Glue Databrew) 
 - After sucessful ingestion, the dataset was connected to AWS Glue DataBrew for running a profiling job.
 - The street-trees.xlsx file from the raw data bucket was connected under the name cov-rawdata-street-tree-project1.
@@ -77,7 +78,29 @@ The dataset provides information details on over 180,000 public trees. For this 
 - ![s8](https://github.com/user-attachments/assets/e897c9a6-ab8f-4e5f-ab24-dfed05da37cb)
 
 
-#### 3] Data Cleaning
+
+#### 3] Data Cleaning (AWS Glue DataBrew)
+- Utilizing the insights from the profiling, a cleaning project was created.
+-  A cleaning recipe 'cov-cleaning-street-data-project1-recipe' was configured.
+-  The following transformations were applied:
+- - Replaced the empty cells in 'Cultivar_Name' with "Not Available". 
+  - Replaced missing dates in Date Planted with a placeholder value "0000-00-00"
+  - Handled outliers in 'Height_Range_ID' and 'Diameter' columns by removing them.
+  - Ensured no duplicate values present in the 'Tree_ID' column.
+  - Published the cleaning recipe to automate these steps for future datasets that have the same schema.
+  - Screenshot of the cleaning job and the attached recipe.
+  - ![s10](https://github.com/user-attachments/assets/4e4773b2-6856-4281-8c97-83cf9236fcc8)
+  - ![s9](https://github.com/user-attachments/assets/c43fef60-1045-4c35-9486-212683475f04)
+
+- Cleaned data was stored in the 'data-cleaning' folder of the transformed bucket, as two outputs.
+- - A CSV file, in 'user' folder, for easy access for individual users viewing the data.
+  - A SNAPPY compressed PARQUET file, in 'system' folder, for being read by the other AWS services.
+  - Screenshot of cleaning job runs and folders for reference.
+  - ![s12](https://github.com/user-attachments/assets/1a16cd23-f5b4-44e1-8376-5082bf92b7b6)
+  - ![s11](https://github.com/user-attachments/assets/35f2818a-d881-455e-8af1-9ef0bc3c1029)
+  
+    
+
 
 
 
