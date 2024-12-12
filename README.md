@@ -33,8 +33,21 @@ The dataset provides information details on over 180,000 public trees. For this 
 - DATE_PLANTED: Date the tree was planted.
 - geo_point_2d: Geospatial coordinates in [latitude, longitude] format.
 
+  Screenshot for Reference: ![Screenshot (464)](https://github.com/user-attachments/assets/745ef262-38e7-4fe1-a45c-63395e878940)
+
+
 ### Methodology 
 #### Data Ingestion 
+- Collected raw data from the City of Vancouver’s open data platform in Excel format.
+- Screenshot showing the city of Vancouver website for reference. ![s1](https://github.com/user-attachments/assets/510ec0b0-fa1f-4b2d-8b58-649ce1540093)
+  
+- Uploaded the raw dataset to AWS S3 in the bucket cov-street-trees-project1.
+- Organized subfolders based on genus and species for structured storage.
+- Used S3 standard storage class for frequent data access,structured organization and long-term storage. Since the dataset is updated daily, and more species and genus data can be added in the future.
+-  Screenshot showing the S3 bucket structure and uploaded raw dataset. ![s2](https://github.com/user-attachments/assets/a79ac4ae-4295-4e93-9c26-40a4d080a128)
+
+
+  
 
 
 
