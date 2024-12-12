@@ -37,14 +37,48 @@ The dataset provides information details on over 180,000 public trees. For this 
 
 
 ### Methodology 
-#### Data Ingestion 
+#### 1] Data Ingestion (AMAZON S3 Service)
 - Collected raw data from the City of Vancouver’s open data platform in Excel format.
-- Screenshot showing the city of Vancouver website for reference. ![s1](https://github.com/user-attachments/assets/510ec0b0-fa1f-4b2d-8b58-649ce1540093)
+- Screenshot showing the city of Vancouver website for reference.
+- ![s1](https://github.com/user-attachments/assets/510ec0b0-fa1f-4b2d-8b58-649ce1540093)
   
 - Uploaded the raw dataset to AWS S3 in the bucket cov-street-trees-project1.
-- Organized subfolders based on genus and species for structured storage.
-- Used S3 standard storage class for frequent data access,structured organization and long-term storage. Since the dataset is updated daily, and more species and genus data can be added in the future.
--  Screenshot showing the S3 bucket structure and uploaded raw dataset. ![s2](https://github.com/user-attachments/assets/a79ac4ae-4295-4e93-9c26-40a4d080a128)
+- Bucket versioning was enabled to prevent against loss of data.
+- Organized subfolders based on genus and species for structured storage to mimic a robust ingestion environment, where new data can be added seamlessly.
+- Within the bucket, I created folders to organize the data based on 'genus_name=malus' and 'species_name=xx'. The dataset was uploaded in XLSX format. 
+- Used S3 standard storage class for frequent data access, structured organization and long-term storage. Since the dataset is updated daily, and more species and genus data can be added in the future.
+-  Screenshot showing the S3 bucket structure and uploaded raw dataset.
+-  ![s2](https://github.com/user-attachments/assets/a79ac4ae-4295-4e93-9c26-40a4d080a128)
+
+
+
+#### 2] Data Profiling (AWS Glue Databrew) 
+- After sucessful ingestion, the dataset was connected to AWS Glue DataBrew for running a profiling job.
+- The street-trees.xlsx file from the raw data bucket was connected under the name cov-rawdata-street-tree-project1.
+- Screenshot of the connected dataset for reference.
+- ![s4](https://github.com/user-attachments/assets/f25a2394-637d-475b-a451-4dd2af6c09d0)
+
+- A new bucket 'cov-transformed-street-tree-project1' was created to store the results of the job runs.
+- A profiling job was run to identify data quality issues.
+- Insights:
+- - 19 string columns, 2 numeric columns, and 1 geospatial column.
+  -  24 % Missing data in 'Cultivar_Name' feature and 25% in 'Date_Planted'.
+  -  Job confirmed that 98% of the cells contained valid data 
+  -  There were no duplicate records in the dataset.
+  -  Outliers were identified in the 'Height_Range_ID' and 'Diameter' columns.
+  -  Central tendency values, distribution metrics and correlation values were visualized for further descriptive analysis.
+  -  Screenshots of the profiling results for refrence.
+  -  ![s5](https://github.com/user-attachments/assets/ace6526a-0fc3-43e7-845f-9daf7fd27533)
+  -  ![s7](https://github.com/user-attachments/assets/fa5f566f-6527-4e8b-a96e-da66ae87fc60)
+  -  ![s6](https://github.com/user-attachments/assets/0106671b-35ca-4f82-8740-a0f419a05845)
+
+- The profiling results were saved in the 'data-profiling' folder of the 'cov-transformed-street-tree-project1' bucket.
+- Screenshot of the saved output for reference.
+- ![s8](https://github.com/user-attachments/assets/e897c9a6-ab8f-4e5f-ab24-dfed05da37cb)
+
+
+#### 3] Data Cleaning
+
 
 
   
