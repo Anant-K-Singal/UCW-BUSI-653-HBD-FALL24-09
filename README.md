@@ -115,24 +115,25 @@ AWS Athena can be used for further data transformation using SQL querying.
    - ![s14](https://github.com/user-attachments/assets/4991efdc-11a3-42db-bdb4-64903beecc19)
    - ![s13](https://github.com/user-attachments/assets/727303a2-b479-48b1-af99-95dd5c2743a6)
 
- ### Deliverables
+### Deliverables
  - Cleaned and Processed Data in CSV and Parquet formats, avaliable for being used by other AWS services for further descriptive, exploratory, diagnostic analysis.
  - A step-by-step demonstration of the AWS console documenting the process to be followed for future ingested datasets.
  -  An established cleaning recipe, available for reuse by new connected datasets that follow the same schema.
  -   A pipeline that provides the aggregate breakdown of the number of trees planted for each street-side. 
 
- ### Timeline
+### Timeline
  Total estimated time for project completion: 3 weeks
  - Data extraction and ingestion: 1 week.
  -  Data profiling and Cleaning: 1 week.
  -  Data pipeline design and implementaion: 1 week. 
 
- ### Impact 
+### Impact 
 This project has provide me with hands-on experience with Amazon Web Services usage for data wrangling, taking the 'street-trees' from the city of Vancouver as an example. The dataset prepared after the wrangling process can be utilized for enhancing the urban forestry analytics for the City of Vancouver. Additionally, this project showcases the scalable methods for integrating, processing, and securing data in cloud platforms.
 
 
 ##    
 ##   
+
 ## Project 2:  
 
 
