@@ -184,6 +184,32 @@ The project encompasses the following key areas:
 
 ### Methodology
 #### Storage Versioning and Replication (AWS S3)
+- Organized datasets into a dedicated S3 buckets for storing the raw, trasformed and curated data respectively structured by data ingestion year and ingestion frequency for efficient access.
+- Enabled S3 bucket versioning to track changes and maintain historical records to datasets, providing rollback capabilities in case of errors or data quality issues.
+- Configured and setup cross-region replication rules for the S3 buckets. This creates copies of the objects in the bucket for disaster recovery and protection against data loss.
+- Screenshot
+
+
+#### Data Encryption (AWS KMS)
+- Created a custom key that can be used for encrypting data using Amazon Key Management Services.
+- Applied encryption to the S3 buckets using this custom generated key.
+- Created role-based policies to restrict access to encryption keys, ensuring that only authorized users can decrypt sensitive data.
+- Defined bucket policies and IAM roles to restrict access ensuring compliance with data privacy requirements.
+
+#### Profiling and Cleaning
+- The datasets are connected to the AWS Glue Databrew and a profiling job is run on them.
+- The generated profiling report aids us to identify patterns, missing values, outliers and any other anomalies presnt in the data features.
+- The profiling insights can be used to identify and plan cleaning processes required to the features.
+- Created a cleaning project and developed reuseable cleaning recipe for the data in AWS Glue Databrew.
+- Cleaned the raw dataset by addressing format inconsistencies in columns like date_of_birth and phone_number, and including foramt standardizing where possible.
+- Replaced the missing values with appropriate placeholders for fields like Visa_Status, IELTS_Score, Emergency_Contact_Phone.
+- Identifying and removing duplicates records and outliers.
+
+ 
+- 
+
+
+
 
 
 
