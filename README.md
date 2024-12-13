@@ -147,12 +147,12 @@ The Registrar’s Office at University Canada West is responsible for maintainin
 
 ### Scope
 The project encompasses the following key areas: 
-- Data avalibility-securely store datasets in AWS S3 with versioning and replication to maintain a history of changes and backup to enable data rollback and prevent against data loss.
-- Data Protection-protect data against external breaches and data theft attempts, by encrypting and restricting access.
-- Data Sensitivity-ensure the integrity of student personal and sensitive information.
-- Data Validity-Define and implement automated checks to ensure consistency, accuracy, and completeness of critical attributes.
-- Data Monitoring-Establish real-time monitoring of data quality metrics and generate insights using dashboards to track trends, identify anomalies, and warn against thresholds.
-- Training and Awarness-Develop training resources and conduct workshops to educate staff on best practices for maintaining data quality and effectively using AWS tools.
+- **Data avalibility** -securely store datasets in AWS S3 with versioning and replication to maintain a history of changes and backup to enable data rollback and prevent against data loss.
+- **Data Protection**-protect data against external breaches and data theft attempts, by encrypting and restricting access.
+- **Data Sensitivity**-ensure the integrity of student personal and sensitive information.
+- **Data Validity**-Define and implement automated checks to ensure consistency, accuracy, and completeness of critical attributes.
+- **Data Monitoring**-Establish real-time monitoring of data quality metrics and generate insights using dashboards to track trends, identify anomalies, and warn against thresholds.
+- **Training and Awarness**-Develop training resources and conduct workshops to educate staff on best practices for maintaining data quality and effectively using AWS tools.
 
 
 
