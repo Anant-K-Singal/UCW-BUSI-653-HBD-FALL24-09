@@ -183,7 +183,9 @@ The project encompasses the following key areas:
 - **Training and Awarness**-Develop training resources and conduct workshops to educate staff on best practices for maintaining data quality and effectively using AWS tools.
 
 ### Methodology
-#### 
+#### Storage Versioning and Replication (AWS S3)
+
+
 
 
 
