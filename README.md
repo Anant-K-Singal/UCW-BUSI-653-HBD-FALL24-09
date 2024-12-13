@@ -217,7 +217,18 @@ The project encompasses the following key areas:
 - For all further analysis and use by other AWS services, the data that has passed the validation and quality checks through this pipeline should be used. 
 
 #### Monitoring and Control (AWS CloudTrail, AWS CloudWatch)
-- 
+- AWS CloudTrail can be used to keep a track on the changes made on the datasets stored in S3.
+- - CloudTrail is configured to record activities on the datasets by other AWS services.
+- - It tracks access, updates, or deletions, ensuring a comprehensive audit trail of who accessed the data, what changes were made, and when they occurred. Hnece, providing historical logs for post-incident investigations.
+- - This helps in identifying any unauthorized or suspicious activities related to sensitive student data and ensures compliance with regulatory standards.
+- AWS CloudWatch is used to set up real-time monitoring of key metrics related to the platform use and system performance.
+- - Custom alarms are set-up for various components of the platform. The alarms can be configured to execute certain steps and codes, or send alerts when defined thresholds are breached.
+  - The frequency of the monitoring can be customized based on the data generation rate of the components, thier monitoring importance and the associated costs.
+  - The creation of custom dashboards enables us to track performance and monitor key metrics in real-time via visualizations like graphs, logs, gauges etc.
+  - They can be used to observe trands, spikes, irregularities for metrics like platform costs, Glue jobs success rates, error counts, and S3 bucket capacities.
+ 
+  #### Training and Awareness
+  - 
 
 
 
