@@ -196,7 +196,7 @@ The project encompasses the following key areas:
 - Created role-based policies to restrict access to encryption keys, ensuring that only authorized users can decrypt sensitive data.
 - Defined bucket policies and IAM roles to restrict access ensuring compliance with data privacy requirements.
 
-#### Profiling and Cleaning
+#### Profiling and Cleaning (AWS Glue Databrew)
 - The datasets are connected to the AWS Glue Databrew and a profiling job is run on them.
 - The generated profiling report aids us to identify patterns, missing values, outliers and any other anomalies presnt in the data features.
 - The profiling insights can be used to identify and plan cleaning processes required to the features.
@@ -205,7 +205,18 @@ The project encompasses the following key areas:
 - Replaced the missing values with appropriate placeholders for fields like Visa_Status, IELTS_Score, Emergency_Contact_Phone.
 - Identifying and removing duplicates records and outliers.
 
- 
+
+#### Data Sensitivity and Validation (AWS Glue)
+- A pipeline was developed to address sensitive information and validate the data.
+- - The pipeline starts by extracting the cleaned and formatted student data (obtained from the above cleaning step), stored in the S3 bucket.
+  - Then adjusted the data schema to ensure consistent attribute data types, dropping cloumns (with unstructured textual information if any), attribute compatibility and uniformity.
+  - Next, detecting the sensitive data attributes utilizing AWS Glue’s PII detection transform to flag and censor sensitive information, such as SIN_Number and Passport_Number. Since, UCW is a Canadian University, the protection rules applied are limited to those applicable only in Canada.
+  - Evaluate the data quality by implementing automated checks for consistency, completeness, and uniqueness for key attributes like Student_ID, Cumulative_cgpa, Visa_status etc.
+  - At the end, the data is categorized by conditional routing and saved as system readable PARQUET files. The records that meet all the validation criteria, are saved as 'Passed' while those that do not meet one or more conditions are saved as 'failed'.
+- The results of the pipleine are stored in the curated S3 bucket.
+- For all further analysis and use by other AWS services, the data that has passed the validation and quality checks through this pipeline should be used. 
+
+#### Monitoring and Control (AWS CloudTrail, AWS CloudWatch)
 - 
 
 
