@@ -145,6 +145,18 @@ The objective of this project is to design and implement a robust Data Quality C
 ### Background
 The Registrar’s Office at University Canada West is responsible for maintaining the student information database, which contains sensitive and critical information such as academic performance, visa status, enrollment eligibility, personal identification and medical details. This dataset plays a key role in many decision-making processes, such as determining students’ academic standing, course enrollments eligibility, scholarship reimbursements, scheduled break approvals, and compliance with institutional and regulatory policies. However, challenges such as missing values in fields, duplicate entries, and inconsistencies in formatting can lead to inefficiencies and errors. These data quality issues risk undermining operational accuracy and decision-making. This project aims to leverage AWS services to implement a robust Data Quality Control (DQC) framework empowering the Registrar’s Office ability to streamline operations, maintain compliance, and support institutional goals effectively.
 
+### Scope
+The project encompasses the following key areas: 
+- Data avalibility-securely store datasets in AWS S3 with versioning and replication to maintain a history of changes and backup to enable data rollback and prevent against data loss.
+- Data Protection-protect data against external breaches and data theft attempts, by encrypting and restricting access.
+- Data Sensitivity-ensure the integrity of student personal and sensitive information.
+- Data Validity-Define and implement automated checks to ensure consistency, accuracy, and completeness of critical attributes.
+- Data Monitoring-Establish real-time monitoring of data quality metrics and generate insights using dashboards to track trends, identify anomalies, and warn against thresholds.
+- Training and Awarness-Develop training resources and conduct workshops to educate staff on best practices for maintaining data quality and effectively using AWS tools.
+
+
+
+
 
 
 
