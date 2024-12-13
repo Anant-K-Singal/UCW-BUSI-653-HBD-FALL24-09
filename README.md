@@ -180,8 +180,14 @@ The project encompasses the following key areas:
 - **Data Sensitivity**-ensure the integrity of student personal and sensitive information.
 - **Data Validity**-Define and implement automated checks to ensure consistency, accuracy, and completeness of critical attributes.
 - **Data Monitoring**-Establish real-time monitoring of data quality metrics and generate insights using dashboards to track trends, identify anomalies, and warn against thresholds.
-- **Training and Awarness**-Develop training resources and conduct workshops to educate staff on best practices for maintaining data quality and effectively using AWS tools.
 
+### Tools and Techniques
+- AWS S3 is used for establishing replication rules and bucket versioning.
+- AWS Glue Databrew for profiling and cleaning the data to address missing values, outliers, and other inconsistencies.
+- Utilize AWS Glue to created pipleine for establishing quality control metrics and dealing with sensitive information.
+- AWS CloudTrail is used to track access and modifications on the strored data by users and other services.
+- Set up alarms and dashboard for real-time monitoring of Costs, Glue jobs, S3 usage, and performance metrics using AWS CloudWatch.   
+  
 ### Methodology
 #### Storage Versioning and Replication (AWS S3)
 - Organized datasets into a dedicated S3 buckets for storing the raw, trasformed and curated data respectively structured by data ingestion year and ingestion frequency for efficient access.
@@ -227,8 +233,7 @@ The project encompasses the following key areas:
   - The creation of custom dashboards enables us to track performance and monitor key metrics in real-time via visualizations like graphs, logs, gauges etc.
   - They can be used to observe trands, spikes, irregularities for metrics like platform costs, Glue jobs success rates, error counts, and S3 bucket capacities.
  
-  #### Training and Awareness
-  - 
+
 
 
 
