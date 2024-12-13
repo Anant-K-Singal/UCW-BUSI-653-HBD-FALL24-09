@@ -41,6 +41,9 @@ AWS Glue Databrew for profiling and creating cleaning recipe for the data.
 AWS Glue, using the visual ETL feature to create a pipeline for data aggregation without any coding. 
 AWS Athena can be used for further data transformation using SQL querying. 
 
+![Screenshot 2024-12-13 142214](https://github.com/user-attachments/assets/7b32fe94-b369-4e14-a9b1-e522508b9c82)
+
+
 ### Methodology 
 #### 1] Data Ingestion (AMAZON S3 Service)
 - Collected raw data from the City of Vancouver’s open data platform in Excel format.
@@ -189,8 +192,10 @@ The project encompasses the following key areas:
 - AWS Glue Databrew for profiling and cleaning the data to address missing values, outliers, and other inconsistencies.
 - Utilize AWS Glue to created pipleine for establishing quality control metrics and dealing with sensitive information.
 - AWS CloudTrail is used to track access and modifications on the strored data by users and other services.
-- Set up alarms and dashboard for real-time monitoring of Costs, Glue jobs, S3 usage, and performance metrics using AWS CloudWatch.   
-  
+- Set up alarms and dashboard for real-time monitoring of Costs, Glue jobs, S3 usage, and performance metrics using AWS CloudWatch.
+
+![Screenshot 2024-12-13 144119](https://github.com/user-attachments/assets/656f4ca3-94c9-467e-b3c3-c26c8c4dd52e)
+
 ### Methodology
 #### Storage Versioning and Replication (AWS S3)
 - Organized datasets into a dedicated S3 buckets for storing the raw, trasformed and curated data respectively structured by data ingestion year and ingestion frequency for efficient access.
