@@ -134,10 +134,58 @@ AWS Athena can be used for further data transformation using SQL querying.
 This project has provide me with hands-on experience with Amazon Web Services usage for data wrangling, taking the 'street-trees' from the city of Vancouver as an example. The dataset prepared after the wrangling process can be utilized for enhancing the urban forestry analytics for the City of Vancouver. Additionally, this project showcases the scalable methods for integrating, processing, and securing data in cloud platforms.
 
 
+
+
+
+
+## Project 2: Descriptive Analysis
+
+### Title
+Descriptive Analysis of Street Tree Dataset for The City of Vancouver
+
+## Objective
+In this project I assume the role of a member of the data team woking for the City of Vancouver. The aim was to design and implement Data Analytical Platform (DAP) hosted on AWS for the street-trees-dataset. The primary goal of this project is to conduct a descriptive analysis on the historical data focusing on the genus "Malus" and species "XX" to summarize key characteristics of the trees planted, identify distribution patterns, and provide insights that can assist in future urban planning and maintenance strategies.
+
+
+
+### Dataset
+The dataset provides information details on over 180,000 public trees. For this analysis, (given the resouces constraints of utilizing the AWS services as a student) a subset of 526 records was selected, focusing just on trees with genus-Malus and species-XX. The Dataset contains 21 features, including: 
+- **Tree Details:** Genus, species, common name, height, and diameter.
+- **Location Data:** Geographic coordinates, address, neightbourhood, street-side details etc.
+- **Maintenance Information:** Root barrier status, planting area type, and curb presence.
+- **Time Data:** Planting date, person who planted, historical updates.
+
+
+### Tools and Techniques
+AWS S3 for data ingestion, storage and organization.
+AWS DataBrew for data profiling and cleaning.
+AWS Glue for designing pipelines and transforming data.
+AWS Athena for querying datasets.
+Visualization and graphing tools like MS-Excel.
+
+### Methodology
+#### Data Processing
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##    
 ##   
 
-## Project 2: Data Quality Control 
+## Project 3: Data Quality Control 
 
 ### Title
 Implementation of Data Quality Control Measures for the UCW Student information Using AWS. 
@@ -283,6 +331,7 @@ The project encompasses the following key areas:
 
 ### Impact 
 This Data Quality Control (DQC) project ensures the University Canada West’s student dataset is accurate, secure, and compliant with regulatory standards. By automating data validation, encryption, and monitoring processes using AWS tools, it enhances decision-making for course enrollment and scholarship management while safeguarding sensitive information and improving operational efficiency.
+
 
 
 
