@@ -145,6 +145,34 @@ The objective of this project is to design and implement a robust Data Quality C
 ### Background
 The Registrar’s Office at University Canada West is responsible for maintaining the student information database, which contains sensitive and critical information such as academic performance, visa status, enrollment eligibility, personal identification and medical details. This dataset plays a key role in many decision-making processes, such as determining students’ academic standing, course enrollments eligibility, scholarship reimbursements, scheduled break approvals, and compliance with institutional and regulatory policies. However, challenges such as missing values in fields, duplicate entries, and inconsistencies in formatting can lead to inefficiencies and errors. These data quality issues risk undermining operational accuracy and decision-making. This project aims to leverage AWS services to implement a robust Data Quality Control (DQC) framework empowering the Registrar’s Office ability to streamline operations, maintain compliance, and support institutional goals effectively.
 
+### Dataset
+The dataset used in this project is a dummy data that has been generated using AI tools to mirrior the actual student information collected and manintained by the Registrar's Office of University Canada West.
+The dummy dataset contains 50 student records across 21 attributes. Below are the key attributes:
+- Student_ID: A unique identifier assigned to each student.
+- Name: Full name of the student.
+- Age: Age of the student.
+- Gender: Gender of the student.
+- Date_of_Birth: Birthdate of the student in YYYY-MM-DD format.
+- Country_of_Citizenship: The country of citizenship of the student.
+- Program: The academic program in which the student is enrolled.
+- Email: Student's personal email address.
+- Phone_Number: Contact phone number of the student.
+- Current_Address: The student's current residential address.
+- Emergency_Contact_Name: Name of a person to contact in case of an emergency.
+- Emergency_Contact_Phone:Phone number of the emergency contact.
+- SIN_Number: The student’s Social Insurance Number.
+- Passport_Number: The student’s passport number.
+- Cumulative_CGPA: Cumulative Grade Point Average of the student.
+- Visa_Status: The current visa status of the student (e.g., Student Visa, Permanent Resident).
+- Enrollment_Status: Current enrollment status (e.g., Active, Suspended, Graduated).
+- IELTS_Score: The score of the International English Language Testing System (IELTS) exam.
+- Scholarship_Amount: Amount of scholarship awarded to the student.
+- Health_Insurance_Status: Indicates if the student has health insurance coverage.
+- BC_Health_Card_Number: The student’s British Columbia health card number.
+- Program_Start_Term: The term in which the student started the program.
+- Year_of_Enrollment: The year the student enrolled in the university.
+
+
 ### Scope
 The project encompasses the following key areas: 
 - **Data avalibility** -securely store datasets in AWS S3 with versioning and replication to maintain a history of changes and backup to enable data rollback and prevent against data loss.
