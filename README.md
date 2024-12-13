@@ -154,8 +154,8 @@ The project encompasses the following key areas:
 - **Data Monitoring**-Establish real-time monitoring of data quality metrics and generate insights using dashboards to track trends, identify anomalies, and warn against thresholds.
 - **Training and Awarness**-Develop training resources and conduct workshops to educate staff on best practices for maintaining data quality and effectively using AWS tools.
 
-
-
+### Methodology
+#### 
 
 
 
