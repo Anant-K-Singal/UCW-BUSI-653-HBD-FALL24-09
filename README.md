@@ -118,14 +118,14 @@ AWS Athena can be used for further data transformation using SQL querying.
 ### Deliverables
  - Cleaned and Processed Data in CSV and Parquet formats, avaliable for being used by other AWS services for further descriptive, exploratory, diagnostic analysis.
  - A step-by-step demonstration of the AWS console documenting the process to be followed for future ingested datasets.
- -  An established cleaning recipe, available for reuse by new connected datasets that follow the same schema.
- -   A pipeline that provides the aggregate breakdown of the number of trees planted for each street-side. 
+ - An established cleaning recipe, available for reuse by new connected datasets that follow the same schema.
+ - A pipeline that provides the aggregate breakdown of the number of trees planted for each street-side. 
 
 ### Timeline
- Total estimated time for project completion: 3 weeks
- - Data extraction and ingestion: 1 week.
- -  Data profiling and Cleaning: 1 week.
- -  Data pipeline design and implementaion: 1 week. 
+ Total estimated time for project completion:**3 weeks**
+ - **Week 1:** Data extraction and ingestion
+ - **Week 2:**  Data profiling and Cleaning
+ - **Week 3:** Data pipeline design and implementaion
 
 ### Impact 
 This project has provide me with hands-on experience with Amazon Web Services usage for data wrangling, taking the 'street-trees' from the city of Vancouver as an example. The dataset prepared after the wrangling process can be utilized for enhancing the urban forestry analytics for the City of Vancouver. Additionally, this project showcases the scalable methods for integrating, processing, and securing data in cloud platforms.
@@ -234,7 +234,20 @@ The project encompasses the following key areas:
   - They can be used to observe trands, spikes, irregularities for metrics like platform costs, Glue jobs success rates, error counts, and S3 bucket capacities.
  
 
+### Timeline
+ Total estimated time for project completion:**4 weeks**
+ - **Week 1:** Setting up S3 buckets, versioning, replication rules and encryption.
+ - **Week 2:**  Data profiling and Cleaning for removing data inconsistencies. 
+ - **Week 3:** Data pipeline design and implementaion for quality control.
+ - **Week 4:** Setting up alarmas and configuring dashboard for monitoring.
 
+### Deliverables
+-  Organized, cleaned, and schema-validated datasets securely stored in S3 with versioning and replication for backup.
+-  Establish a data quality control framework for handling sensitivity information and implementing validation and control rules.
+-  Creation of dashboard for monitoring real-time insights, trends and summarizing key data quality metrics.
+
+### Impact 
+This Data Quality Control (DQC) project ensures the University Canada West’s student dataset is accurate, secure, and compliant with regulatory standards. By automating data validation, encryption, and monitoring processes using AWS tools, it enhances decision-making for course enrollment and scholarship management while safeguarding sensitive information and improving operational efficiency.
 
 
 
