@@ -134,7 +134,19 @@ This project has provide me with hands-on experience with Amazon Web Services us
 ##    
 ##   
 
-## Project 2:  
+## Project 2: Data Quality Control 
+
+### Title
+Implementation of Data Quality Control Measures for the UCW Student information Using AWS. 
+
+### Objective
+The objective of this project is to design and implement a robust Data Quality Control (DQC) framework for the student dataset managed by the Registrar’s Office at University Canada West. This framework would ensure the integrity, compliance, consistency, and security of student records, enabling reliable decision-making processes for course enrollment, visa compliance, emergency medical senarios and scholarship eligibility.
+
+### Background
+The Registrar’s Office at University Canada West is responsible for maintaining the student information database, which contains sensitive and critical information such as academic performance, visa status, enrollment eligibility, personal identification and medical details. This dataset plays a key role in many decision-making processes, such as determining students’ academic standing, course enrollments eligibility, scholarship reimbursements, scheduled break approvals, and compliance with institutional and regulatory policies. However, challenges such as missing values in fields, duplicate entries, and inconsistencies in formatting can lead to inefficiencies and errors. These data quality issues risk undermining operational accuracy and decision-making.
+
+
+
 
 
 
