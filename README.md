@@ -193,7 +193,25 @@ Visualization and graphing tools like MS-Excel.
 - **Insights:**
 - - The maximum number of trees are planted on the even street side (233 trees), while an extremly low number is planted on the median side (3 trees).
   - Most trees are classified within the lower height classes, with very few trees exceeding to the high height ranges.
-  - 
+
+### Timeline
+ Total estimated time for project completion:**5 weeks**
+ - **Week 1:** Data extraction, ingestion, profiling and Cleaning. 
+ - **Week 2:**  Data pipeline design and implementaion
+ - **Week 3:** Conducting descriptive analysis, developing visualizations and key insights.
+ - **Week 4:** Preparing deatiled report of the findings and providing actionable reccomendations.
+ - **Week 5:** Presentaion of the key insights from the report to the stakeholders.
+
+
+### Deliverables
+- A detailed descriptive analysis report summarizing the historical data, documenting the findings nad insights, and providing actionable recommendations.
+- Setting up processes that can automate the profiling, cleaning and aggregation for datasets of diffrent species of trees.
+- Development of a data analytical platform using Amazon's Web based cloud services, that can provide a shared space for the data team of city of vancouver to conduct data analysis. 
+- Data visualizations like line graphs, bar charts, box-plots, pie charts etc. of key insights from analysis to present them to the stakeholders. 
+
+### Impact
+The descriptive analysis would provide the City of Vancouver with crucial insights into the distribution and characteristics of its planted street trees, enabling data-driven urban planning and environmental management. By identifying the planting trends, underrepresented areas, the city can optimize their tree-planting initiatives and allocate maintenance resources efficiently. This would support development of  greener neighborhoods and the progress towards the city’s sustainability goals.
+
 
 
 
