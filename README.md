@@ -175,8 +175,16 @@ Visualization and graphing tools like MS-Excel.
 - Published the cleaning recipe which can be reused for future datasets with same schema.
 - Saved outputs in two formats: User friendly CSV file and System readable PARQUET file.
 
-#### Data Trasformation
-  
+#### Data Trasformation (AWS Glue)
+- Designed pipelines using the Visual ETL feature form AWS Glue. The pipelines can be used to preform descriptive aggregations on the dataset without any coding.
+- **Pipeline design:** The data is extracted from S3 raw bucket, then the columns unnecessary for aggregation are dropped. The aggregation like count, average, median etc. is carried over the required attributes in accordance with the distribution feature.
+- Using the pipeline the aggregated data of the number of trees by street side (Even, Odd, Park, Median) was calculated.
+- Another pipeline was used to find the aggregation for the distribution of trees accoring to height classifications (using the Height_Range_ID feature)
+- The results from the pipelines were stored back as CSV and Parquet files in designated folders within the S3 Transformed bucket.
+
+
+#### Statistics and Visualizations
+
 
 
 
