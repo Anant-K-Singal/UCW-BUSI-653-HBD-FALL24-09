@@ -219,8 +219,10 @@ Visualization and graphing tools like MS-Excel.
 
 #### Recommendations
 - Increase tree planting on the median street sides where close to no trees are planted. Introduce ornamental species to enhance aesthetic appeal and environmental benefits, in case Malus xx species are incompatible.
-- 
-- 
+- Improve data collection processes, particularly for missing attributes like Cultivar Name. This will ensure accountability and increase the easy and quality of maintenance.
+- Align tree planting plans with infrastructure limitations, especially on streets, to prevent future conflicts with utilities and roadways. Focus on medium-height species for constrained spaces while reserving larger trees for open areas.
+- Establish a robust monitoring and data update schedule to capture changes in tree growth, health, and distribution. This will support ongoing analysis and better inform future decisions.
+- Use publicly accessible tree data to collaborate with local researchers, urban planners, and policymakers to develop innovative solutions and optimize planting strategies for both ecological and urban needs.
 
 
 ### Timeline
