@@ -164,7 +164,19 @@ AWS Athena for querying datasets.
 Visualization and graphing tools like MS-Excel.
 
 ### Methodology
-#### Data Processing 
+#### Data Processing (AWS S3, Glue Databrew) 
+- The dataset was sourced from the City of Vancouver’s open data portal and stored in AWS S3 buckets for processing.
+- The data was organized into folders based on genus and species for scalability.
+- Connected the dataset from the S3 bucket to Glue DataBrew for running a data profiling job.
+- The results of the profiling was used to identify issues such as missing values, duplicate rows, and cardinality.
+- No duplicate rocords were found. Dataset cardinality was high with  less than 1% outliers. Cultivator_Name column had 24% missing values and Date_Planted had 25% values missing.
+- A cleaning project was created in Databrew, and a cleaning recipe was developed for the dataset.
+- Replaced missing values with "Not available" and "0000-00-00" in the Cultivator_Name and Date_Planted columns respectively. Outliers were removed from the HEIGHT_RANGE_ID and DIAMETER columns.
+- Published the cleaning recipe which can be reused for future datasets with same schema.
+- Saved outputs in two formats: User friendly CSV file and System readable PARQUET file.
+
+#### Data Trasformation
+  
 
 
 
