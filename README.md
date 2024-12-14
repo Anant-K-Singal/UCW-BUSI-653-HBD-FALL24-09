@@ -163,6 +163,9 @@ AWS Glue for designing pipelines and transforming data.
 AWS Athena for querying datasets.
 Visualization and graphing tools like MS-Excel.
 
+![Screenshot 2024-12-13 180000](https://github.com/user-attachments/assets/c3022d50-379c-4a49-b8f6-d0e78d864f2b)
+
+
 ### Methodology
 #### Data Processing (AWS S3, Glue Databrew) 
 - The dataset was sourced from the City of Vancouver’s open data portal and stored in AWS S3 buckets for processing.
@@ -171,10 +174,14 @@ Visualization and graphing tools like MS-Excel.
 - The results of the profiling was used to identify issues such as missing values, duplicate rows, and cardinality.
 - The dataset showed 98% completeness, with only 2% of overall data containing empty cells.
 - No duplicate rocords were found. Dataset cardinality was high with  less than 1% outliers. Cultivator_Name column had 24% missing values and Date_Planted had 25% values missing.
+- - Screenshots from the profiling for reference.
+- ![Screenshot 2024-12-13 180147](https://github.com/user-attachments/assets/d5a8026b-1ce8-4a76-9672-25cd54bdad7f)
+- ![s7](https://github.com/user-attachments/assets/e3f893c1-3663-44ab-93f3-a6e43b9adac2)
 - A cleaning project was created in Databrew, and a cleaning recipe was developed for the dataset.
 - Replaced missing values with "Not available" and "0000-00-00" in the Cultivator_Name and Date_Planted columns respectively. Outliers were removed from the HEIGHT_RANGE_ID and DIAMETER columns.
 - Published the cleaning recipe which can be reused for future datasets with same schema.
 - Saved outputs in two formats: User friendly CSV file and System readable PARQUET file.
+
 
 #### Data Trasformation (AWS Glue)
 - Designed pipelines using the Visual ETL feature form AWS Glue. The pipelines can be used to preform descriptive aggregations on the dataset without any coding.
@@ -182,6 +189,14 @@ Visualization and graphing tools like MS-Excel.
 - Using the pipeline the aggregated data of the number of trees by street side (Even, Odd, Park, Median) was calculated.
 - Another pipeline was used to find the aggregation for the distribution of trees accoring to height classifications (using the Height_Range_ID feature)
 - The results from the pipelines were stored back as CSV and Parquet files in designated folders within the S3 Transformed bucket.
+- Using AWS Glue, a data catalog for the S3 bucket datasets can be created. This will enable maintaining metadata (e.g., schema, tags, formats) for quick understanding of related datases.
+- Analysts can run specific SQL queries to compute summary statistics (like averages, counts, distributions), for a specific subsection of the dataset and answer specific analysis questions using AWS Athena, making it ideal for exploratory analysis.
+- Screenshot of the pipeline for reference.
+- ![Screenshot 2024-12-13 181441](https://github.com/user-attachments/assets/7f27a81b-a6de-44f6-8ad6-a2010682ab0c)
+- Screenshts of example SQL queries that can be used in AWS Athena for reference.
+- ![s28](https://github.com/user-attachments/assets/bb67ea1a-1d27-4df6-8180-eb91bffd573f)
+- ![s27](https://github.com/user-attachments/assets/4f54eace-42ce-4eb6-b701-a6d0160c93af)
+
 
 
 #### Statistics and Visualizations
@@ -193,6 +208,13 @@ Visualization and graphing tools like MS-Excel.
 - **Insights:**
 - - The maximum number of trees are planted on the even street side (233 trees), while an extremly low number is planted on the median side (3 trees).
   - Most trees are classified within the lower height classes, with very few trees exceeding to the high height ranges.
+  - Most trees have diameter on the lower end, only a very few trees are thick and haave high diameter.
+  - Screenshot of the boxplots and feature distribution obtained from databrew for reference.
+  - ![s6](https://github.com/user-attachments/assets/c7a8f549-abc6-40e9-a3c7-747043483106)
+  - Screenshots of the bar charts made using spreadsheet application for reference.
+  - ![Screenshot 2024-12-13 181230](https://github.com/user-attachments/assets/e64e125f-3802-4a4b-a194-fe624bb3588f)
+  - ![Screenshot 2024-12-13 181209](https://github.com/user-attachments/assets/5b6a4cb3-0c71-40a4-b4a3-973ba34a7f19)
+
 
 ### Timeline
  Total estimated time for project completion:**5 weeks**
