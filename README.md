@@ -209,11 +209,18 @@ Visualization and graphing tools like MS-Excel.
 - - The maximum number of trees are planted on the even street side (233 trees), while an extremly low number is planted on the median side (3 trees).
   - Most trees are classified within the lower height classes, with very few trees exceeding to the high height ranges.
   - Most trees have diameter on the lower end, only a very few trees are thick and haave high diameter.
+  - Larger height ranges are more prevalent in specific areas, while medium or small-sized trees dominate in others.
+  - Trees planted on the "Park" street side appear to have more uniform distribution across height ranges, indicating that parks host a mix of mature and younger trees.
   - Screenshot of the boxplots and feature distribution obtained from databrew for reference.
   - ![s6](https://github.com/user-attachments/assets/c7a8f549-abc6-40e9-a3c7-747043483106)
   - Screenshots of the bar charts made using spreadsheet application for reference.
   - ![Screenshot 2024-12-13 181230](https://github.com/user-attachments/assets/e64e125f-3802-4a4b-a194-fe624bb3588f)
   - ![Screenshot 2024-12-13 181209](https://github.com/user-attachments/assets/5b6a4cb3-0c71-40a4-b4a3-973ba34a7f19)
+
+#### Recommendations
+- Increase tree planting on the median street sides where close to no trees are planted. Introduce ornamental species to enhance aesthetic appeal and environmental benefits, in case Malus xx species are incompatible.
+- 
+- 
 
 
 ### Timeline
