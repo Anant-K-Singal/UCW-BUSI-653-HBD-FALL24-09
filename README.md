@@ -411,6 +411,14 @@ The dataset used in this project is a dummy dataset, generated to reflect the st
   - Removed high outlier values in Scholarship_Amount, based on maximum and minimum scholarship awarded information.
   - Standardize Date_of_Birth format to YYYY-MM-DD.
 - The cleaned data is stored in the transformed data bucket, in two formats. A CSV file to be read by users and a Snappy Parquet file for use by other AWS services.
+
+#### Data Pipeline Design (AWS Glue Pipelines)
+- The cleaned Parquet file stored in S3 transformed bucket is extracted and used as input to design a pipeline in AWS Glue.
+- The cloumns not required to generate aggregate statistics are dropped from the analysis.
+- The data was aggregated using the Aggregate node to compute the average Cumulative_CGPA grouped by Program and Total Scholarship_Amount awarded by IELTS_score.
+- The result is saved back in the transformed data bucket, in a CSV and PARQUET formats.
+- 
+
   
 
 
