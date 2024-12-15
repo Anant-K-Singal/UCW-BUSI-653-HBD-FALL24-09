@@ -298,6 +298,9 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 - Once combined the same pipeline is further developed to find aggregation and distribution statistics for exploratory analysis.
 - The columns not required for the analysis were dropped, and the aggregate node was added to compute the count of trees grouped by multiple dimensions, such as: Street Sides (Even, Odd, Median, Park), Neighbourhood Name, Blocks, and Curbs across Tree Height range and Diameter. These aggregations revealed patterns in the spatial distribution of tree species and their physical attributes.
 - The output of the pipeline is stored back in the transform data S3 bucket.
+- Screenshot of a pipline for Reference.
+-  ![Screenshot 2024-12-14 214852](https://github.com/user-attachments/assets/7dd0d502-266d-463e-8a20-5c5bd7fe9f15)
+
 
 #### Visualizations and Insights (AWS Glue Databrew, MS-Excel)
 - The summarized amd aggregated results were utilized to generate meaningful visualizations, helping to uncover patterns and trends in the spatial and physical distribution of the Malus genus trees. AWS Glue Databrew and MS-Excel were used for this purpose.
@@ -308,6 +311,9 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 - A pie chart demonstrated the aggreage of the trees across root barriers and with and without curbs.
 - A scatter plot was created using geo_point_2d data to map the spatial distribution of trees across the city.
 - A heatmap was produced to visualize the relationship between neighborhoods and tree height ranges.
+- Screenshot example of a distribution graph for reference.
+- ![Screenshot 2024-12-14 214908](https://github.com/user-attachments/assets/17459371-0e51-4f95-a30e-7dbd3de536ff)
+
 
 #### Recommendations
 - Tree planting can be focused in underutilized spaces, such as medians and odd-numbered street sides, to achieve a more equitable distribution. Planting shorter species on medians can be considered to accommodate space constraints.
@@ -359,7 +365,7 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 ##    
 ##   
 
-## Project 3: Data Quality Control 
+## Project 4: Data Quality Control 
 
 ### Title
 Implementation of Data Quality Control Measures for the UCW Student information Using AWS. 
