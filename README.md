@@ -78,7 +78,7 @@ AWS Athena can be used for further data transformation using SQL querying.
   -  Screenshots of the profiling results for refrence.
   -  ![s5](https://github.com/user-attachments/assets/ace6526a-0fc3-43e7-845f-9daf7fd27533)
   -  ![s7](https://github.com/user-attachments/assets/fa5f566f-6527-4e8b-a96e-da66ae87fc60)
-  -  ![s6](https://github.com/user-attachments/assets/0106671b-35ca-4f82-8740-a0f419a05845)
+
 
 
 
@@ -282,7 +282,6 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 - Visualization and graphing spreadsheet applications like MS-Excel.
 
 ### Methodology 
-
 
 
 
