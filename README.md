@@ -360,7 +360,32 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 ##    
 ##   
 
-## Project 4: Data Quality Control 
+## Project 4: Data Wrangling
+
+### Title
+Implementation of Data Wrangling Measures for the UCW Student Information Dataset Using Amazon Web Cloud Services.
+
+### Objective
+The objective of this project is to design and implement a robust Data Wrangling framework using AWS services to process and prepare the University Canada West (UCW) student information dataset. This framework ensures that the data is clean, structured, and ready for further analysis. The project aims to address common issues such as missing values, duplicates, and formatting inconsistencies. The wrangling process will enhance the dataset's reliability, enabling accurate decision-making in areas such as academic standing, course enrollment, visa regulation compliance, scholarship disbursals, and emergency response planning.
+
+### Background
+The Registrar’s Office at University Canada West is responsible for maintaining the student information database, and relies on critical information recorded in the dataset for institutional operations such as academic standing evaluations, visa compliance checks, scholarship processing, and emergency management. However, challenges such as missing fields, inconsistent data formats, and duplicate records can undermine operational efficiency and decision-making. This project demonstrates how AWS cloud services can be leveraged to address these issues by implementing a scalable data wrangling framework to improve data quality and readiness for further analysis. 
+
+### Tools and Techniques
+- AWS S3: For storing raw data inputs.
+- AWS Glue DataBrew: For data profiling and cleaning with reusable recipes.
+- AWS Glue Pipelines: For data transformation and summarization.
+
+
+### Methodology
+#### Data Ingestion (AWS S3)
+
+
+
+
+
+
+## Project 5: Data Quality Control 
 
 ### Title
 Implementation of Data Quality Control Measures for the UCW Student information Using AWS. 
