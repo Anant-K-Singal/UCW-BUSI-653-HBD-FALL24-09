@@ -108,7 +108,7 @@ AWS Athena can be used for further data transformation using SQL querying.
    - ![s13](https://github.com/user-attachments/assets/727303a2-b479-48b1-af99-95dd5c2743a6)
 
 ### Deliverables
- - Cleaned and Processed Data in CSV and Parquet formats, avaliable for being used by other AWS services for further descriptive, exploratory, diagnostic analysis.
+ - Cleaned and Processed Data in CSV and Parquet formats, available for being used by other AWS services for further descriptive, exploratory, diagnostic analysis.
  - A step-by-step demonstration of the AWS console documenting the process to be followed for future ingested datasets.
  - An established cleaning recipe, available for reuse by new connected datasets that follow the same schema.
  - A pipeline that provides the aggregate breakdown of the number of trees planted for each street-side. 
@@ -384,6 +384,7 @@ The dataset used in this project is a dummy dataset, generated to reflect the st
 - AWS S3: For storing raw data inputs.
 - AWS Glue DataBrew: For data profiling and cleaning with reusable recipes.
 - AWS Glue Pipelines: For data transformation and summarization.
+- ![Screenshot 2024-12-14 231137](https://github.com/user-attachments/assets/fa7d6719-5ea9-45f4-b170-ad55ab5fdcbe)
 
 
 ### Methodology
@@ -417,9 +418,23 @@ The dataset used in this project is a dummy dataset, generated to reflect the st
 - The cloumns not required to generate aggregate statistics are dropped from the analysis.
 - The data was aggregated using the Aggregate node to compute the average Cumulative_CGPA grouped by Program and Total Scholarship_Amount awarded by IELTS_score.
 - The result is saved back in the transformed data bucket, in a CSV and PARQUET formats.
-- 
 
-  
+
+
+### Deliverables
+- Dataset that has been cleaned and processed into CSV and Parquet formats, ready for use by other AWS services for additional descriptive, exploratory, and diagnostic analysis.
+- A detailed documentaion providing a walkthrough of the AWS console outlining the procedure to be utilized for data wrangling.
+- A standardized cleaning formula, accessible for reuse by new updated student information datasets that adhere to the same data attribute structure.
+
+
+### Timeline
+ Total estimated time for project completion:**3 weeks**
+ - **Week 1:** Data generation and ingestion.
+ - **Week 2:**  Data profiling and Cleaning.
+ - **Week 3:** Data pipeline design and implementaion.
+
+### Impact 
+This project improves the integrity and usability of the UCW student information dataset by addressing data quality issues. Using AWS services it establishes a scalable and reusable framework for data preparation, enabling the results to be utlizied for creating efficient workflows and reliable decision-making processes. The cleaned and structured dataset supports critical processes such as enrollment management, academic standing evaluation, visa and regualtor compliance, and scholarship allocation, ensuring readiness for advanced analytics and fostering data-driven planning at the university.
 
 
 
