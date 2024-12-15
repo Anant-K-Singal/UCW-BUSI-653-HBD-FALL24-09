@@ -92,9 +92,9 @@ AWS Athena can be used for further data transformation using SQL querying.
   - Handled outliers in 'Height_Range_ID' and 'Diameter' columns by removing them.
   - Ensured no duplicate values present in the 'Tree_ID' column.
   - Published the cleaning recipe to automate these steps for future datasets that have the same schema.
-  - Screenshot of the cleaning job and the attached recipe.
+  - Screenshot of  the attached recipe for reference.
   - ![s10](https://github.com/user-attachments/assets/4e4773b2-6856-4281-8c97-83cf9236fcc8)
-  - ![s9](https://github.com/user-attachments/assets/c43fef60-1045-4c35-9486-212683475f04)
+  
 
 - Cleaned data was stored in the 'data-cleaning' folder of the transformed bucket, as two outputs.
 - - A CSV file, in 'user' folder, for easy access for individual users viewing the data.
@@ -300,6 +300,45 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 - The output of the pipeline is stored back in the transform data S3 bucket.
 
 #### Visualizations and Insights (AWS Glue Databrew, MS-Excel)
+- The summarized amd aggregated results were utilized to generate meaningful visualizations, helping to uncover patterns and trends in the spatial and physical distribution of the Malus genus trees. AWS Glue Databrew and MS-Excel were used for this purpose.
+- A bar chart was created to illustrate the number of trees of various species planted on each street side (Even, Odd, Median, Park).
+- A stacked barchart illustrated the distribution of the tree heights across the species.
+- Stacked Bar plots was also created for the count of trees grouped by species across diffrent neighborhoods.
+- The box plots showed the frequency distribution for the tree diameters and height ranges. Almost all species had only a few trees in the higher diameter and height ranges.
+- A pie chart demonstrated the aggreage of the trees across root barriers and with and without curbs.
+- A scatter plot was created using geo_point_2d data to map the spatial distribution of trees across the city.
+- A heatmap was produced to visualize the relationship between neighborhoods and tree height ranges.
+
+#### Recommendations
+- Tree planting can be focused in underutilized spaces, such as medians and odd-numbered street sides, to achieve a more equitable distribution. Planting shorter species on medians can be considered to accommodate space constraints.
+- Target planting in neighborhoods with low tree densities to balance tree cover across the city. Plans to engage the local communities in tree-planting can be developed, this will promote awareness and participation.
+- Trees planted on curbs exhibit smaller diameters, possibly due to restricted growing conditions. The use of root barriers can help improve soil quality to support healthier growth hence increasing curbside planting. Alterntively, smaller species with lower space requirements can be favoured for curbside planting.
+- Taller trees are predominantly found on even street sides indicating the even side having more planting space. Schedule regular maintenance to ensure tree health and prevent potetial interference with overhead utilities sue to tree growth.
+- develop plans to allocate maintenance resources proportionally to areas with a higher concentration of larger and taller trees. Also use the maintenance insights collected to prevent overgrowth and ensure tree health.
+
+
+### Timeline
+ Total estimated time for project completion:**7 weeks**
+ - **Week 1:** Data extraction, ingestion, profiling and Cleaning. 
+ - **Week 2:**  Data pipeline design and implementaion.
+ - **Week 3:** Conducting descriptive analysis, developing visualizations and key insights.
+ - **Week 4,5**: Carry out exploratory analysis to identify treands and distribution patterns. 
+ - **Week 6:** Prepare a deatiled report containing the findings and providing actionable reccomendations.
+ - **Week 7:** Presentaion and visualization of the key insights to present to the stakeholders.
+
+
+
+### Deliverables
+- A cleaned and combined master dataset containing data for multiple Malus species.
+- Development of processes on the Data Analytical Platform to automate the progiling, cleaning, combining and aggregation processes for future ingested data.
+- Establishing a pipeiline design to provide aggregation results for tree distributions across street sides, neighborhoods, height ranges, blocks, and curb placements.
+- A exploratory report conatining visualizations in the form of Charts and Graphs, showcasing the trends and patterns of the planted trees.
+- A detailed documentation of the methodology, tools used, insights obtained from the exploratory analysis and providing actionable recommendations including suggestions for tree planting and urban forestry management.
+
+
+
+  
+
 
 
   
