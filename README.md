@@ -144,8 +144,7 @@ This project has provide me with hands-on experience with Amazon Web Services us
 Descriptive Analysis of Street Tree Dataset for The City of Vancouver
 
 ## Objective
-In this project I assume the role of a member of the data team woking for the City of Vancouver. The aim was to design and implement Data Analytical Platform (DAP) hosted on AWS for the street-trees-dataset. The primary goal of this project is to conduct a descriptive analysis on the historical data focusing on the genus "Malus" and species "XX" to summarize key characteristics of the trees planted, identify distribution patterns, and provide insights that can assist in future urban planning and maintenance strategies.
-
+In this project I assume the role of a member of the data team working for the City of Vancouver. The aim was to design and implement Data Analytical Platform (DAP) hosted on AWS for the street-trees-dataset. The primary goal of this project is to conduct a descriptive analysis on the historical data focusing on the genus "Malus" and species "XX" to summarize key characteristics of the trees planted, identify distribution patterns, and provide insights that can assist in future urban planning and maintenance strategies.
 
 
 ### Dataset
@@ -157,11 +156,11 @@ The dataset provides information details on over 180,000 public trees. For this 
 
 
 ### Tools and Techniques
-AWS S3 for data ingestion, storage and organization.
-AWS DataBrew for data profiling and cleaning.
-AWS Glue for designing pipelines and transforming data.
-AWS Athena for querying datasets.
-Visualization and graphing tools like MS-Excel.
+- AWS S3 for data ingestion, storage and organization.
+- AWS DataBrew for data profiling and cleaning.
+- AWS Glue for designing pipelines and transforming data.
+- AWS Athena for querying datasets.
+- Visualization and graphing tools like MS-Excel.
 
 ![Screenshot 2024-12-13 180000](https://github.com/user-attachments/assets/c3022d50-379c-4a49-b8f6-d0e78d864f2b)
 
@@ -242,6 +241,52 @@ Visualization and graphing tools like MS-Excel.
 
 ### Impact
 The descriptive analysis would provide the City of Vancouver with crucial insights into the distribution and characteristics of its planted street trees, enabling data-driven urban planning and environmental management. By identifying the planting trends, underrepresented areas, the city can optimize their tree-planting initiatives and allocate maintenance resources efficiently. This would support development of  greener neighborhoods and the progress towards the city’s sustainability goals.
+
+
+
+
+## Project 3: Exploratory Data Analysis
+
+### Title
+Exploratory Data Analysis on Public Street Trees Data using Amazon Web Services.
+
+### Objective
+The primary objective of this project is to explore the public street tree dataset provided by the City of Vancouver to gain insights into the characteristics and patterns of various trees species of genus "Malus" planted across various street sides, neighbourhoods, blocks and regions. By leveraging AWS tools, we analyze the distribution of trees based on attributes such as height, species, and location placement to identify trends that can provide insights to inform urban forestry planning decisions.
+
+### Background
+Let us assume the role of a  data team member for the City of Vancouver. The aim is to design a Data Analytical Platform (DAP) using Amazon cloud services to conduct exploratory analysis on the stret trees plantaion data focusing on the different species of genus "Malus". The analysis goalis to explore the key characteristics of the trees planted, identify distribution patterns, and provide insights that can assist city of vancouvers development goals.
+
+### Dataset 
+The dataset consists of 850 records and 21 features for the 'Malus' genus trees, extracted from the open portal or city of vancouver containing over 180,000 public tree information excluding private and park trees. The schema of the dataset is as follows: 
+- TREE_ID: Unique numerical identifier for each tree.
+- CIVIC_NUMBER: Street address of the tree's location.
+- SPECIES_NAME: NAme of the species of the tree from genus-Malus.
+- STD_STREET: Name of the street where the tree is located.
+- COMMON_NAME: Common name (e.g., Scotch Pine).
+- ASSIGNED: Indicates if the address is made up (Y/N).
+- ROOT_BARRIER: Whether a root barrier is installed (Y/N).
+- PLANT_AREA: Location type (e.g., behind sidewalk, tree grate).
+- ON_STREET_BLOCK: Street block where the tree is located.
+- ON_STREET: The name of the street the tree is physically on.
+- NEIGHBOURHOOD_NAME: Local area where the tree is planted.
+- STREET_SIDE_NAME: Side of the street (Even, Odd, Median).
+- HEIGHT_RANGE: Height range of the tree in feet.
+- Height_Range_id: An ID representing the tree’s height range, coresspoinding to a specific height interval. (e.g.,0,1)
+- DIAMETER: Tree trunk diameter at breast height (in inches).
+- CURB: Whether the tree is on a curb (Y/N).
+- DATE_PLANTED: Date the tree was planted.
+- geo_point_2d: Geospatial coordinates in [latitude, longitude] format.
+
+
+### Tools and Techniques
+- AWS S3 for data ingestion, storage and organization.
+- AWS DataBrew for data profiling and cleaning.
+- AWS Glue for designing pipelines and transforming data.
+- AWS Athena for querying datasets.
+- Visualization and graphing spreadsheet applications like MS-Excel.
+
+### Methodology 
+
 
 
 
