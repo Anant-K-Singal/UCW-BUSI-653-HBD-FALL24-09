@@ -63,8 +63,6 @@ AWS Athena can be used for further data transformation using SQL querying.
 #### 2] Data Profiling (AWS Glue Databrew) 
 - After sucessful ingestion, the dataset was connected to AWS Glue DataBrew for running a profiling job.
 - The street-trees.xlsx file from the raw data bucket was connected under the name cov-rawdata-street-tree-project1.
-
-
 - A new bucket 'cov-transformed-street-tree-project1' was created to store the results of the job runs.
 - A profiling job was run to identify data quality issues.
 - Insights:
@@ -371,6 +369,17 @@ The objective of this project is to design and implement a robust Data Wrangling
 ### Background
 The Registrar’s Office at University Canada West is responsible for maintaining the student information database, and relies on critical information recorded in the dataset for institutional operations such as academic standing evaluations, visa compliance checks, scholarship processing, and emergency management. However, challenges such as missing fields, inconsistent data formats, and duplicate records can undermine operational efficiency and decision-making. This project demonstrates how AWS cloud services can be leveraged to address these issues by implementing a scalable data wrangling framework to improve data quality and readiness for further analysis. 
 
+### Dataset 
+The dataset used in this project is a dummy dataset, generated to reflect the structure and attributes of the actual UCW student information database. It contains 50 records across 21 attributes, including:
+-  Identification and Demographics: Student_ID, Name, Date_of_Birth, Age, Gender, Country_of_Citizenship.
+-  Academic Information: Program, Cumulative_CGPA, Program_Start_Term, Year_of_Enrollment, Enrollment_Status, IELTS_Score. 
+-  Contact Information: EmailPhone_Number, Current_Address, Emergency_Contact_Name, Emergency_Contact_Phone.\
+-  Administrative and Compliance Information: SIN_Number, Passport_Number, Visa_Status.
+-  Financial Information: Scholarship_Amount.
+-  Health Information: Health_Insurance_Status, BC_Health_Card_Number.
+
+  
+
 ### Tools and Techniques
 - AWS S3: For storing raw data inputs.
 - AWS Glue DataBrew: For data profiling and cleaning with reusable recipes.
@@ -379,7 +388,30 @@ The Registrar’s Office at University Canada West is responsible for maintainin
 
 ### Methodology
 #### Data Ingestion (AWS S3)
+- The dummy dataset was generated and saved as an Excel file, then this file is uploaded to AWS S3 inside the raw data bucket.
+- Organized the folders and subfolders to create a structure for ingestion according to year and ingestion frequency for efficient access.
+- S3 standard storage class has been used since the dataset is accessed frequently. S3 standard ensures scalability, facilitate streamlined and long-term storage.
+- Bucket versioning was enabled to prevent against loss of data.
 
+
+#### Data Profiling (AWS Glue DataBrew)
+- The ingested raw dataset is connected to AWS Glue DataBrew.
+- A profiling job is run for the dataset to get information of the dataset's quality.
+- The dataset contains 16 string columns, 3 numerical columns, and 2 date columns.
+- It was found that there was 8% missing values in Emergency_Contact_Name and 5% missing in Health_Insurance_Status.
+- Outliers are identified in Scholarship_Amount and few duplicate rows are detected in Student_ID.
+- The profiling results are saved in the 'data-profiling-results' folder within the S3 bucket dedicated for storing transformed data.
+
+#### Data Cleaning (AWS Glue DataBrew)
+- The insights from the data profiling are utilized and a cleaning project was created using in Glue DataBrew.
+- A reusable cleaning recipe was developed the following transformation were applied:
+- - Replaced missing entries with "Not Available" in the Emergency_Contact_Name feature.
+  - Health_Insurance_Status column is filled with "Unknown".
+  - Removed duplicate rows based on Student_ID, and only unique values are kept.
+  - Removed high outlier values in Scholarship_Amount, based on maximum and minimum scholarship awarded information.
+  - Standardize Date_of_Birth format to YYYY-MM-DD.
+- The cleaned data is stored in the transformed data bucket, in two formats. A CSV file to be read by users and a Snappy Parquet file for use by other AWS services.
+  
 
 
 
