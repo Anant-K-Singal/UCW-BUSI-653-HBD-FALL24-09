@@ -273,6 +273,8 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 - AWS Glue for designing pipelines and transforming data.
 - AWS Athena for querying datasets.
 - Visualization and graphing spreadsheet applications like MS-Excel.
+- ![Screenshot 2024-12-14 221135](https://github.com/user-attachments/assets/5246a771-c683-4888-87b7-cf1ceb74a607)
+
 
 ### Methodology 
 #### Data Collection and Preparation (AWS S3, Glue Databrew) 
