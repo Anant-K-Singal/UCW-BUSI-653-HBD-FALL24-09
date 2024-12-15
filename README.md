@@ -76,7 +76,6 @@ AWS Athena can be used for further data transformation using SQL querying.
   -  Central tendency values, distribution metrics and correlation values were visualized for further descriptive analysis.
 - - The profiling results were saved in the 'data-profiling' folder of the 'cov-transformed-street-tree-project1' bucket.
   -  Screenshots of the profiling results for refrence.
-  -  ![s5](https://github.com/user-attachments/assets/ace6526a-0fc3-43e7-845f-9daf7fd27533)
   -  ![s7](https://github.com/user-attachments/assets/fa5f566f-6527-4e8b-a96e-da66ae87fc60)
 
 
@@ -92,16 +91,13 @@ AWS Athena can be used for further data transformation using SQL querying.
   - Handled outliers in 'Height_Range_ID' and 'Diameter' columns by removing them.
   - Ensured no duplicate values present in the 'Tree_ID' column.
   - Published the cleaning recipe to automate these steps for future datasets that have the same schema.
-  - Screenshot of  the attached recipe for reference.
-  - ![s10](https://github.com/user-attachments/assets/4e4773b2-6856-4281-8c97-83cf9236fcc8)
-  
-
 - Cleaned data was stored in the 'data-cleaning' folder of the transformed bucket, as two outputs.
 - - A CSV file, in 'user' folder, for easy access for individual users viewing the data.
   - A SNAPPY compressed PARQUET file, in 'system' folder, for being read by the other AWS services.
-  - Screenshot of cleaning job runs and folders for reference.
-  - ![s12](https://github.com/user-attachments/assets/1a16cd23-f5b4-44e1-8376-5082bf92b7b6)
-  - ![s11](https://github.com/user-attachments/assets/35f2818a-d881-455e-8af1-9ef0bc3c1029)
+- Screenshot of  the recipe for reference.
+  - ![s10](https://github.com/user-attachments/assets/4e4773b2-6856-4281-8c97-83cf9236fcc8)
+
+
 
   #### 4] Data Transformation (AWS Glue)
     - The cleaned PARQUET file was used as input for creating an AWS Glue ETL pipeline.
@@ -110,8 +106,7 @@ AWS Athena can be used for further data transformation using SQL querying.
       - Then the columns unnecessary for aggreagation analysis were dropped using the Change Schema node.
       -  The  tree_counts wwere aggragated by street side using the Aggregate node.
       -  Finally, the output was again saved in the S3 buckets, as two outputs, a user friendly CSV file and a system readable PARQUET file.
-   - Screenshots of the pipeline and saved outputs for reference.
-   - ![s14](https://github.com/user-attachments/assets/4991efdc-11a3-42db-bdb4-64903beecc19)
+   - Screenshots of the pipeline reference.
    - ![s13](https://github.com/user-attachments/assets/727303a2-b479-48b1-af99-95dd5c2743a6)
 
 ### Deliverables
@@ -171,7 +166,6 @@ The dataset provides information details on over 180,000 public trees. For this 
 - No duplicate rocords were found. Dataset cardinality was high with  less than 1% outliers. Cultivator_Name column had 24% missing values and Date_Planted had 25% values missing.
 - - Screenshots from the profiling for reference.
 - ![Screenshot 2024-12-13 180147](https://github.com/user-attachments/assets/d5a8026b-1ce8-4a76-9672-25cd54bdad7f)
-- ![s7](https://github.com/user-attachments/assets/e3f893c1-3663-44ab-93f3-a6e43b9adac2)
 - A cleaning project was created in Databrew, and a cleaning recipe was developed for the dataset.
 - Replaced missing values with "Not available" and "0000-00-00" in the Cultivator_Name and Date_Planted columns respectively. Outliers were removed from the HEIGHT_RANGE_ID and DIAMETER columns.
 - Published the cleaning recipe which can be reused for future datasets with same schema.
@@ -188,9 +182,8 @@ The dataset provides information details on over 180,000 public trees. For this 
 - Analysts can run specific SQL queries to compute summary statistics (like averages, counts, distributions), for a specific subsection of the dataset and answer specific analysis questions using AWS Athena, making it ideal for exploratory analysis.
 - Screenshot of the pipeline for reference.
 - ![Screenshot 2024-12-13 181441](https://github.com/user-attachments/assets/7f27a81b-a6de-44f6-8ad6-a2010682ab0c)
-- Screenshts of example SQL queries that can be used in AWS Athena for reference.
+- Screenshts of an example SQL queries that can be used in AWS Athena for reference.
 - ![s28](https://github.com/user-attachments/assets/bb67ea1a-1d27-4df6-8180-eb91bffd573f)
-- ![s27](https://github.com/user-attachments/assets/4f54eace-42ce-4eb6-b701-a6d0160c93af)
 
 
 
@@ -403,7 +396,6 @@ The dummy dataset contains 50 student records across 21 attributes. Below are th
 - Program_Start_Term: The term in which the student started the program.
 - Year_of_Enrollment: The year the student enrolled in the university.
 - Screenshot of part of the dataset for reference.
-- ![Screenshot 2024-12-13 134112](https://github.com/user-attachments/assets/d3159558-cbc8-4fe8-8d0b-e20d73310119)
 
 
 
@@ -444,8 +436,7 @@ The project encompasses the following key areas:
 - Defined bucket policies and IAM roles to restrict access ensuring compliance with data privacy requirements.
 - Screenshot of the Custom Key generated for Reference.
 - ![s18](https://github.com/user-attachments/assets/5212c137-7e63-459b-9ea6-d781cf004697)
-- Screenshot of the Encryption of S3 bucket for reference.
-- ![s21](https://github.com/user-attachments/assets/3aedb8ca-60c2-43e9-876c-8f2f21f4ff19)
+
 
 
 #### Profiling and Cleaning (AWS Glue Databrew)
@@ -456,10 +447,7 @@ The project encompasses the following key areas:
 - Cleaned the raw dataset by addressing format inconsistencies in columns like date_of_birth and phone_number, and including foramt standardizing where possible.
 - Replaced the missing values with appropriate placeholders for fields like Visa_Status, IELTS_Score, Emergency_Contact_Phone.
 - Identifying and removing duplicates records and outliers.
-- Screenshot of the profiling output for reference.
-- ![s24](https://github.com/user-attachments/assets/33560e1a-4704-4642-a158-adc99b7f8ad4)
-- Screenshot of the cleaning jobs for reference.
-- ![s22](https://github.com/user-attachments/assets/428cbb35-dc8d-438a-8e12-bfed101fd0f2)
+
 
 
 #### Data Sensitivity and Validation (AWS Glue)
@@ -471,9 +459,9 @@ The project encompasses the following key areas:
   - At the end, the data is categorized by conditional routing and saved as system readable PARQUET files. The records that meet all the validation criteria, are saved as 'Passed' while those that do not meet one or more conditions are saved as 'failed'.
 - The results of the pipleine are stored in the curated S3 bucket.
 - For all further analysis and use by other AWS services, the data that has passed the validation and quality checks through this pipeline should be used.
-- Screenshot of the pipeline and the job run for reference.
+- Screenshot of the pipeline for reference.
 - ![Screenshot 2024-12-12 200119](https://github.com/user-attachments/assets/dd156404-5a14-4518-b2c1-90b004c8a284)
-- ![s15](https://github.com/user-attachments/assets/581b08b0-5b6f-4d12-b9bf-575a2b68aa3e)
+
 
 
 
