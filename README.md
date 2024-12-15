@@ -33,7 +33,6 @@ The dataset provides information details on over 180,000 public trees. For this 
 - DATE_PLANTED: Date the tree was planted.
 - geo_point_2d: Geospatial coordinates in [latitude, longitude] format.
 
-  Screenshot for Reference: ![Screenshot (464)](https://github.com/user-attachments/assets/745ef262-38e7-4fe1-a45c-63395e878940)
 
 ### Tools and Technologies 
 AWS S3 for string the raw data input and the result outputs of the other AWS services.
@@ -64,8 +63,7 @@ AWS Athena can be used for further data transformation using SQL querying.
 #### 2] Data Profiling (AWS Glue Databrew) 
 - After sucessful ingestion, the dataset was connected to AWS Glue DataBrew for running a profiling job.
 - The street-trees.xlsx file from the raw data bucket was connected under the name cov-rawdata-street-tree-project1.
-- Screenshot of the connected dataset for reference.
-- ![s4](https://github.com/user-attachments/assets/f25a2394-637d-475b-a451-4dd2af6c09d0)
+
 
 - A new bucket 'cov-transformed-street-tree-project1' was created to store the results of the job runs.
 - A profiling job was run to identify data quality issues.
@@ -76,14 +74,12 @@ AWS Athena can be used for further data transformation using SQL querying.
   -  There were no duplicate records in the dataset.
   -  Outliers were identified in the 'Height_Range_ID' and 'Diameter' columns.
   -  Central tendency values, distribution metrics and correlation values were visualized for further descriptive analysis.
+- - The profiling results were saved in the 'data-profiling' folder of the 'cov-transformed-street-tree-project1' bucket.
   -  Screenshots of the profiling results for refrence.
   -  ![s5](https://github.com/user-attachments/assets/ace6526a-0fc3-43e7-845f-9daf7fd27533)
   -  ![s7](https://github.com/user-attachments/assets/fa5f566f-6527-4e8b-a96e-da66ae87fc60)
   -  ![s6](https://github.com/user-attachments/assets/0106671b-35ca-4f82-8740-a0f419a05845)
 
-- The profiling results were saved in the 'data-profiling' folder of the 'cov-transformed-street-tree-project1' bucket.
-- Screenshot of the saved output for reference.
-- ![s8](https://github.com/user-attachments/assets/e897c9a6-ab8f-4e5f-ab24-dfed05da37cb)
 
 
 
