@@ -103,7 +103,7 @@ AWS Athena can be used for further data transformation using SQL querying.
   - ![s12](https://github.com/user-attachments/assets/1a16cd23-f5b4-44e1-8376-5082bf92b7b6)
   - ![s11](https://github.com/user-attachments/assets/35f2818a-d881-455e-8af1-9ef0bc3c1029)
 
-  #### Data Transformation (AWS Glue)
+  #### 4] Data Transformation (AWS Glue)
     - The cleaned PARQUET file was used as input for creating an AWS Glue ETL pipeline.
     - Pipeline Design:
     - - The data was extracted form S3 bucket as input.
@@ -194,7 +194,7 @@ The dataset provides information details on over 180,000 public trees. For this 
 
 
 
-#### Statistics and Visualizations
+#### Statistics and Visualizations (AWS Glue Databrew, MS-Excel)
 - The aggregate outputs from the data pipelnes can be used as inputs for visualization tools.
 - The bar graph showing the count of Malus XX trees on each street side (Even, Odd, Park, Median) is created using MS-Excel.
 - The Stacked bar graph depicting the distribution of tree heights across different street sides is created.
@@ -282,8 +282,24 @@ The dataset consists of 850 records and 21 features for the 'Malus' genus trees,
 - Visualization and graphing spreadsheet applications like MS-Excel.
 
 ### Methodology 
+#### Data Collection and Preparation (AWS S3, Glue Databrew) 
+- The dataset was extracted from the open data portal of the city of vancouver, after filtering out the data records just for genus-Malus.
+- The extrwcted dataset was ingested into AWS using Amazon S3 into a bucket dedicated for raw data storage.
+- A logical bucket organization scheme was established, creating folder hierarchy for genus and species sun-folders to emulate a scalable data ingestion framework.
+- A profiling job was carried out after connecting it to AWS Glue DataBrew and results insights aided to identify data descripencies such as missing values, duplicate rows, outliers and cardinality.
+- The profiling also provided the distribution of the dataset attributes and the correlation coefficients between the numerical features.
+- After profiling, in Databrew a cleaning project was created. The cleaning recipe which was developed during the descriptive analyis in project 2, was used to clean this dataset as it had the same schema.
+- The recipe processes the data to replace the missing values with "Not available" and "0000-00-00" in the Cultivator_Name and Date_Planted columns respectively. The Outliers were removed from the HEIGHT_RANGE_ID and DIAMETER columns.
+- The outputs are saved in the trasformed databucket as a user friendly CSV file and a system readable PARQUET file.
 
+#### Exploratory Analysis (AWS Glue)
+- A pipeline is developed to combine the new cleaned dataset with the previously cleaned data for the 'xx' species stored in S3 the trasformed data bucket. AWS GLue visual ETL feature is utilized for this process.
+- The pipeline xtracts the two cleaned datasets in PARQUET formats from S3, and uses the 'Union' node to combine the two, to created a new master dataset. It uses Tree_id as the primary refrence key. This union is possible because the datssets have the same metadata.
+- Once combined the same pipeline is further developed to find aggregation and distribution statistics for exploratory analysis.
+- The columns not required for the analysis were dropped, and the aggregate node was added to compute the count of trees grouped by multiple dimensions, such as: Street Sides (Even, Odd, Median, Park), Neighbourhood Name, Blocks, and Curbs across Tree Height range and Diameter. These aggregations revealed patterns in the spatial distribution of tree species and their physical attributes.
+- The output of the pipeline is stored back in the transform data S3 bucket.
 
+#### Visualizations and Insights (AWS Glue Databrew, MS-Excel)
 
 
   
